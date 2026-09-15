@@ -23,7 +23,6 @@ void validateImage(
 }
 }
 
-
 cv::Mat swapRedBlueChannels(
     const cv::Mat& image)
 {

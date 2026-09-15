@@ -18,7 +18,6 @@ mirror = false
 
 # Clockwise rotation of the displayed preview: 0, 90, 180, or 270 degrees.
 rotation = 0
-
 window_name = "Photo Booth"
 
 [capture]

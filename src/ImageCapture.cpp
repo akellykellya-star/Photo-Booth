@@ -105,7 +105,6 @@ void ImageCapture::close() noexcept {
       capture_.release();
     }
   } catch (...) {
-    // Destructors and close() must not allow an exception to escape.
   }
 
   clearImage();

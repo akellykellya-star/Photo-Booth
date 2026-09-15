@@ -31,7 +31,6 @@ cv::Mat dynamicContrast(
 cv::Mat rotateImage(
     const cv::Mat& image,
     double angle);
-
 }
 
 #endif

@@ -183,14 +183,11 @@ bool handleKey(
             << state.quantization_levels
             << " levels)"
             << '\n';
-
         break;
       
     case ']':
         if (state.quantization_levels < 256) {
-
             state.quantization_levels *= 2;
-
             if (state.quantization_levels > 256) {
                 state.quantization_levels = 256;
             }
@@ -199,29 +196,22 @@ bool handleKey(
             << "Quantization levels: "
             << state.quantization_levels
             << '\n';
-
         break;
       
     case '[':
-
         if (state.quantization_levels > 2) {
-
             state.quantization_levels /= 2;
         }
-
         std::cout
             << "Quantization levels: "
             << state.quantization_levels
             << '\n';
 
         break;
-
     case 'r':
     case 'R':
-
         state.rotation_enabled =
             !state.rotation_enabled;
-
         std::cout
             << "Rotation: "
             << (state.rotation_enabled
@@ -231,49 +221,36 @@ bool handleKey(
             << state.rotation_angle
             << " degrees)"
             << '\n';
-
         break;
 
     case '<':
-
         state.rotation_angle -= 5.0;
-
         if (state.rotation_angle < -180.0) {
             state.rotation_angle = -180.0;
         }
-
         std::cout
             << "Rotation angle: "
             << state.rotation_angle
             << " degrees"
             << '\n';
-
         break;
-
     case '>':
-
         state.rotation_angle += 5.0;
-
         if (state.rotation_angle > 180.0) {
             state.rotation_angle = 180.0;
         }
-
         std::cout
             << "Rotation angle: "
             << state.rotation_angle
             << " degrees"
             << '\n';
-
         break;
     default:
         break;
     }
-
     return true;
 }
-
 }
-
 
 int main(
     int argc,
@@ -356,14 +333,12 @@ int main(
             << key
             << '\n';
     }
-
         if (!handleKey(
             key,
             processing_state)) {
                 break;
             }
         }
-
         cv::destroyAllWindows();
     }
     catch (const cv::Exception& error) {
